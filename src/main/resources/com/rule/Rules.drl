@@ -1,0 +1,39 @@
+package com.rule
+
+import model.Parameterek
+
+
+rule "Indás infü"
+	when 
+		S: Parameterek(tipus =="Lágyszárú évelö" && talajtipus=="Közepesen nedves" && virag_szine =="Kék")
+	then
+		S.setId(1);
+	end
+	
+rule "Piros gyüszüvirág"
+	when 
+		S: Parameterek(tipus =="kétéves" && talajtipus== "agyagos" && virag_szine =="Piros" )
+	then
+		S.setId(2);
+	end
+
+
+	/*rule "Indás infü"
+	when 
+		S: Parameterek(tipus =="Lágyszárú évelö" && min_magassag==15 && max_magassag ==30 && min_szelesseg==30
+						&& max_szelesseg==75&& expozicio=="telt napsütés"&& talajtipus=="Közepesen nedves"
+						&& min_viragzas=="Május"&& max_viragzas=="Június"&& virag_szine=="kék"&&extra_szin=="-"
+						&& min_ultetesi_zona==3 && max_ultetesi_zona== 10 && toxicias=="-" && PH=="-")
+	then
+		S.setId(1);
+	end
+rule "Piros gyüszüvirág"
+	when 
+		S: Parameterek(tipus =="kétéves" && min_magassag== 60 && max_magassag == 150 && min_szelesseg==30
+						&& max_szelesseg==60 && expozicio=="telt napsütés" && talajtipus== "agyagos"
+						&& min_viragzas=="Június" && max_viragzas=="Július" && virag_szine=="piros" &&extra_szin=="-"
+						&& min_ultetesi_zona==4 && max_ultetesi_zona== 10 && toxicias=="-" && PH=="-")
+	then
+		S.setId(2);
+	end*/
+	
